@@ -89,10 +89,6 @@ button:active, button:hover {
     width: 100%;
 }
 
-.feature-content + .feature-content, .usecase-content + .usecase-content {
-    margin-left: 1em;
-}
-
 h2 {
     font-size: 24px;
     font-weight: bold;
@@ -100,8 +96,12 @@ h2 {
     color: #5E35B1;
 }
 
-.feature-content h2, .feature-content p {
+.feature-content h2, .feature-content p, .usecase-section h2, .usecase-section p {
     text-align: center;
+}
+
+.feature-content + .feature-content, .usecase-content + .usecase-content {
+    margin: 1em 0 0 0;
 }
 
 .usecase-section {
@@ -109,7 +109,6 @@ h2 {
 }
 
 .usecase-section h2, .usecase-section p {
-    text-align: center;
     color: #FAFAFA;
 }
 
@@ -119,5 +118,9 @@ h2 {
     }
     .feature-section, .usecase-section {
         display: flex;
+    }
+    
+    .feature-content + .feature-content, .usecase-content + .usecase-content {
+        margin: 0 0 0 1em;
     }
 }
